@@ -1,19 +1,36 @@
-# DevStation
+# 🚀 DevStation
 
 Infrastructure as Code for my Linux development workstation.
 
-## Stack
+![Debian](https://img.shields.io/badge/Debian-13-red)
+![Docker](https://img.shields.io/badge/Docker-Latest-blue)
+![Terraform](https://img.shields.io/badge/Terraform-Latest-purple)
+![Ansible](https://img.shields.io/badge/Ansible-Latest-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
+## ✨ Features
 
 - Debian 13
 - Docker
 - Terraform
 - Ansible
-- KVM
-- Proxmox
-- Kubernetes
+- KVM / Libvirt
+- Virt-Manager
 - VS Code
-- GitHub Actions
+- GitHub CLI
+- kubectl
+- Helm
+- Ollama
 
-## Goal
+---
 
-Rebuild my complete development workstation with a single command.
+## Install
+
+```bash
+git clone git@github.com:ThomaMart/DevStation.git
+
+cd DevStation
+
+./install.sh
