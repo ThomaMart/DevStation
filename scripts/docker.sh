@@ -20,11 +20,17 @@ curl -fsSL https://download.docker.com/linux/debian/gpg \
 
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
+VERSION_CODENAME=$(
+    # shellcheck disable=SC1091
+    . /etc/os-release
+    echo "$VERSION_CODENAME"
+)
+
 # Repository
 echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
 https://download.docker.com/linux/debian \
-$(. /etc/os-release && echo $VERSION_CODENAME) stable" \
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" \
 | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
 sudo apt update
@@ -36,7 +42,7 @@ containerd.io \
 docker-buildx-plugin \
 docker-compose-plugin
 
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 
 echo
 echo "✔ Docker installed"

@@ -21,8 +21,8 @@ cloud-image-utils
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 
-sudo usermod -aG libvirt $USER
-sudo usermod -aG kvm $USER
+sudo usermod -aG libvirt "$USER"
+sudo usermod -aG kvm "$USER"
 
 echo
 echo "✔ KVM installed"
