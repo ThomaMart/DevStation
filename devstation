@@ -1,0 +1,92 @@
+#!/bin/bas
+
+VERSION=$(cat VERSION)
+
+case "$1" in
+
+version)
+
+    echo "DevStation $VERSION"
+    ;;
+
+doctor)
+
+    bash scripts/check.sh
+    ;;
+
+install)
+
+    case "$2" in
+
+    base)
+
+        bash scripts/base.sh
+        ;;
+
+    docker)
+
+        bash scripts/docker.sh
+        ;;
+
+    terraform)
+
+        bash scripts/terraform.sh
+        ;;
+
+    github)
+
+        bash scripts/github.sh
+        ;;
+
+    vscode)
+
+        bash scripts/vscode.sh
+        ;;
+
+    kvm)
+
+        bash scripts/kvm.sh
+        ;;
+
+    all)
+
+        bash install.sh
+        ;;
+
+    *)
+
+        echo "Unknown component"
+
+        ;;
+
+    esac
+
+    ;;
+
+*)
+
+echo
+
+echo "DevStation"
+
+echo
+
+echo "./devstation install base"
+
+echo "./devstation install docker"
+
+echo "./devstation install terraform"
+
+echo "./devstation install vscode"
+
+echo "./devstation install kvm"
+
+echo "./devstation install all"
+
+echo "./devstation doctor"
+
+echo "./devstation version"
+
+;;
+
+esac
