@@ -28,4 +28,12 @@ kvm:
 cloud:
 	bash scripts/download-images.sh
 
+cloudinit:
+	bash scripts/cloud-init.sh
+
+vm:
+	bash scripts/create-vm.sh
+
+status:
+	bash scripts/status.sh
 
