@@ -21,5 +21,18 @@ code --version
 ansible --version
 
 echo
+echo "===== Virtualization ====="
+
+virsh --version
+
+virt-manager --version || true
+
+systemctl is-active libvirtd
+
+echo
+
+
+
+echo
 
 echo "========================="

@@ -22,3 +22,10 @@ github:
 extensions:
 	bash scripts/vscode_extensions.sh
 
+kvm:
+	bash scripts/kvm.sh
+
+cloud:
+	bash scripts/download-images.sh
+
+

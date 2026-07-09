@@ -12,6 +12,7 @@ bash scripts/terraform.sh
 bash scripts/github.sh
 bash scripts/vscode.sh
 bash scripts/vscode_extensions.sh
+bash scripts/kvm.sh
 
 echo
 echo "Installation completed."
