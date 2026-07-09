@@ -2,20 +2,23 @@
 
 set -e
 
-echo "Updating Debian..."
+echo "===================================="
+echo "Installing base packages..."
+echo "===================================="
 
 sudo apt update
 sudo apt full-upgrade -y
 
-echo "Installing base packages..."
-
 sudo apt install -y \
 git \
+git-lfs \
 curl \
 wget \
 vim \
+nano \
 tree \
 htop \
 btop
 
-echo "Done."
+echo
+echo "✔ Base packages installed"

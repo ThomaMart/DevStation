@@ -8,5 +8,7 @@ echo "===================================="
 
 bash scripts/base.sh
 
+bash scripts/docker.sh
+
 echo
 echo "Installation completed."
