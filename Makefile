@@ -10,3 +10,15 @@ docker:
 check:
 	bash scripts/check.sh
 
+terraform:
+	bash scripts/terraform.sh
+
+vscode:
+	bash scripts/vscode.sh
+
+github:
+	bash scripts/github.sh
+
+extensions:
+	bash scripts/vscode_extensions.sh
+

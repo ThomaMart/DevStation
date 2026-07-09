@@ -14,6 +14,12 @@ docker compose version
 
 terraform version || true
 
+gh --version
+
+code --version
+
+ansible --version
+
 echo
 
 echo "========================="
